@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:temashop:module:Temashop_DelayedAmqp:etc/topology.xsd">
+    <exchange name="magento-delayed" type="x-delayed-message" connection="amqp">
+        <binding id="processDelayedMessage"
+                 topic="vconnect.delayed.example"
+                 destinationType="queue"
+                 destination="vconnect.delayed.example">
+        </binding>
+        <arguments>
+            <argument name="x-delayed-type" xsi:type="string">topic</argument>
+        </arguments>
+    </exchange>
+</config>
