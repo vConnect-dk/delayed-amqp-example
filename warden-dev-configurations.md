@@ -21,7 +21,7 @@ services:
 5. Restart the Warden environment to apply the changes.
 ```bash
 warden env down
-warden evn stop
+warden env stop
 ```
 
 6. Run the following command to check if the plugin was installed:
